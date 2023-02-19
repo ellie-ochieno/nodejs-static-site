@@ -8,7 +8,7 @@
 # EXPOSE 3005
 
 FROM node:14.17.5
-FROM inginx:alpine
+# FROM inginx:alpine
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -17,7 +17,7 @@ WORKDIR /usr/src/app
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
 COPY package*.json ./
-COPY . /usr/share/nginx/html
+# COPY . /usr/share/nginx/html
 
 RUN npm install
 # If you are building your code for production
